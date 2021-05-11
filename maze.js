@@ -358,7 +358,7 @@ function createMaze1NonAni() {
 function createMaze2() {
 
     var r = Math.random();
-    
+
     maze[start.x][start.y] = r < density ? 0 : 1;
 
     drawBlock(start.x, start.y, maze[start.x][start.y]);
@@ -412,11 +412,11 @@ function init() {
 
 function onCreate() {
 
-    document.getElementById("chkAnimated").setAttribute("disabled","disabled");
-    document.getElementById("sltType").setAttribute("disabled","disabled");
-    document.getElementById("cols").setAttribute("disabled","disabled");
-    document.getElementById("rows").setAttribute("disabled","disabled");
-    document.getElementById("density").setAttribute("disabled","disabled");
+    document.getElementById("chkAnimated").setAttribute("disabled", "disabled");
+    document.getElementById("sltType").setAttribute("disabled", "disabled");
+    document.getElementById("cols").setAttribute("disabled", "disabled");
+    document.getElementById("rows").setAttribute("disabled", "disabled");
+    document.getElementById("density").setAttribute("disabled", "disabled");
     document.getElementById("btnCreateMaze").setAttribute("disabled", "disabled");
 
     wid = document.getElementById("maze").offsetWidth - padding;
@@ -429,7 +429,7 @@ function onCreate() {
 
     if (mazeType == "Maze1") {
         cols = cols + 1 - cols % 2;
-        rows = rows + 1 - rows % 2;    
+        rows = rows + 1 - rows % 2;
     }
 
     maze = createArray(cols, rows);
@@ -459,7 +459,7 @@ function onCreate() {
             createMaze1NonAni();
         }
     } else {
-        density = eval(document.getElementById("density").value)/100;
+        density = eval(document.getElementById("density").value) / 100;
         start.x = 0;
         start.y = 0;
 
@@ -472,7 +472,7 @@ function onCreate() {
         }
     }
 }
-function maze2chosen()
-{
-    document.getElementById("density").setAttribute("disabled","disabled");
+
+function maze2chosen() {
+    document.getElementById("density").setAttribute("disabled", "disabled");
 }
